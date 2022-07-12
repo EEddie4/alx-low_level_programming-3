@@ -11,10 +11,9 @@ char *_strcpy(char *dest, char *src)
 	char *cpy = dest;
 	int index = 0;
 
-	while (src[index])
+	while (*src)
 	{
-		dest[index] = src[index];
-		index++;
+		*dest++ = *src++;
 	}
 	return (cpy);
 }
