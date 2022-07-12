@@ -8,6 +8,7 @@
  */
 char *_strcpy(char *dest, char *src)
 {
+	char *cpy = dest;
 	int index = 0;
 
 	while (src[index])
@@ -15,5 +16,5 @@ char *_strcpy(char *dest, char *src)
 		dest[index] = src[index];
 		index++;
 	}
-	return (dest);
+	return (cpy);
 }

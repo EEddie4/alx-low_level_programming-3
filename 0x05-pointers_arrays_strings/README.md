@@ -52,14 +52,3 @@ the differences between the two as well as how to use and manipulate strings in 
   * [9-strcpy.c](./9-strcpy.c): C function that copies the string pointed to by
   `src`, including the terminating null byte (`\0`), to the buffer pointed to by `dest`.
     * Returns the pointer to `dest`.
-
-* **10. Great leaders are willing to sacrifice the numbers to save the people. Poor leaders sacrifice the people to save the numbers**
-  * [100-atoi.c](./100-atoi.c): C function that converts a string to an integer
-  without using `long`, new variable arrays, or hard-coded special values, as follows:
-    * The number in the string can be preceded by an infinite number of characters.
-    * Takes into account all `+` and `-` signs before the number.
-    * If there are no numbers in the string, the function returns `0`.
-
-* **11. Don't hate the hacker, hate the code**
-  * [101-keygen.c](./101-keygen.c): C program that generates random valid passwords
-  for the program [101-crackme].
