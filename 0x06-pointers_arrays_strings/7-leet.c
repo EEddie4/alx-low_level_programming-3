@@ -10,16 +10,16 @@ char *leet(char *s)
 	char str[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 	char sub[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	while (*s)
+	while (s[i])
 	{
 		for (j = 0; j < 10; j++)
 		{
-			if (*s == str)
+			if (s[i] == str[j])
 			{
-				*s = sub;
+				s[i] = sub[j];
 			}
 		}
-		s++;
+		i++;
 	}
 	return (s);
 }
