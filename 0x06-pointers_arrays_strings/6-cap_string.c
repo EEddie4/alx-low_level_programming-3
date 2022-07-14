@@ -20,7 +20,7 @@ int check_separators(char c)
 	return (0);
 }
 
-char *cap_string(char *s)
+char *cap_string(char *)
 {
 	int i = 0;
 
