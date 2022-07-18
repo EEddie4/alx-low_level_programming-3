@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strstr - locates a substring. 
+ * _strstr - locates a substring.
  * @haystack: an input string to search in
  * @needle: input string to locate into haystack.
  * Return: pointer to the beginning of the located
@@ -12,9 +12,6 @@ char *_strstr(char *haystack, char *needle)
 
 	while (*haystack)
 	{
-		sstring = haystack;
-		needle = n_input;
-
 		while (*haystack == *needle)
 		{
 			haystack++;
@@ -24,7 +21,7 @@ char *_strstr(char *haystack, char *needle)
 		{
 			return (haystack);
 		}
-		haystack = sstring + 1;
+		haystack++;
 	}
 	return (NULL);
 }
