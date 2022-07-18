@@ -9,20 +9,19 @@
 char *_strpbrk(char *s, char *accept)
 {
 	char *unique = accept;
-	int i = 0;
 
-	while (s[i])
+	while (*s)
 	{
-		while (accept[i])
+		while (*accept)
 		{
-			if (accept[i] == s[i])
+			if (*accept == *s)
 			{
-				return (s[i]);
+				return (s);
 			}
 			accept++;
 		}
 		accept = unique;
-		i++;
+		s++;
 	}
-	return (NULL);
+	return ('\0');
 }
