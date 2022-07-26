@@ -26,10 +26,10 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		while (str[index])
+		for (index = 0; index < len; index++)
 		{
-			copy[index] = str[index];
-			index++;
+			copy[index] = *str;
+			str++;
 		}
 		copy[len] = '\0';
 		return (copy);
