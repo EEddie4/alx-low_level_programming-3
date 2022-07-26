@@ -10,7 +10,7 @@ char **strtow(char *str)
 	char **array;
 	int i = 0, j = 0, m, k = 0, letlen = 0, wlen = 0;
 
-	if (str == NULL || str == "")
+	if (str == NULL || *str == '\0')
 		return (NULL);
 	for (; str[i]; i++)
 	{
@@ -29,7 +29,7 @@ char **strtow(char *str)
 				j = i;
 				while ((str[j] != ' ' || str[j] != '\t') && str[j] != '\0')
 					j++, letlen++;
-				array[k] = malloc(sizeof(char) * (len + 1));
+				array[k] = malloc(sizeof(char) * (letlen + 1));
 				if (array[k] == NULL)
 				{
 					for (k = k - 1; k >= 0; k--)
@@ -37,8 +37,11 @@ char **strtow(char *str)
 					free(array);
 					return (NULL);
 				}
-				for (m = 0; m < letlen; m++; i++)
+				for (m = 0; m < letlen; m++)
+				{
 					array[k][m] = str[i];
+					i++;
+				}
 				array[k++][m] = '\0';
 			}
 		}
