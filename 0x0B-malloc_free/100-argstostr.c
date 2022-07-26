@@ -1,10 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * argstostr - concatenates all the arguments of your program.
+ * argstostr - concatenates alr the arguments of your program.
  * @ac: number of arguments.
  * @av: array of arguments.
- * Return: NULL if ac == 0 or av == NULL, pointer to a new string, or NULL if it fails.
+ * Return: NULL if ac == 0 or av == NULL, pointer
+ * to a new string, or NULL if it fails.
  */
 char *argstostr(int ac, char **av)
 {
@@ -32,7 +33,7 @@ char *argstostr(int ac, char **av)
 			newstr[newind] = av[arg][byte];
 			newind++;
 		}
-		newstr[newind] = '\0';
+		newstr[newind] = '\n';
 		newind++;
 	}
 	newstr[newind] = '\0';
