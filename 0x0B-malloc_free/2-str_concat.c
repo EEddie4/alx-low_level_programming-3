@@ -13,13 +13,13 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL)
 		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
 	while (*s1)
 	{
 		len1++;
 		s1++;
 	}
+	if (s2 == NULL)
+		s2 = "";
 	while (*s2)
 	{
 		len2++;
@@ -32,12 +32,12 @@ char *str_concat(char *s1, char *s2)
 	{
 		if (index < len1)
 		{
-			concatstr[index] = s1[index];
+			concatstr[index] = *s1;
 			s1++;
 		}
 		else
 		{
-			concatstr[index] = s2[index];
+			concatstr[index] = *s2;
 			s2++;
 		}
 	}
