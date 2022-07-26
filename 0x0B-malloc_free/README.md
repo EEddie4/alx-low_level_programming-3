@@ -47,3 +47,19 @@ in the project.
   * [4-free_grid.c](./4-free_grid.c): C function that frees a two-dimensional array previsouly
   created by the `alloc_grid` function defined in `3-alloc_grid.c`.
     * The program does not crash upon receiving invalid two-dimensional arrays.
+
+* **5. It isn't the mountains ahead to climb that wear you out; it's the pebble in your shoe**
+  * [5-argstostr.c](./5-argstostr.c): C function that returns a pointer to a
+  newly-allocated space in memory containing the concatenation of all the arguments of the
+  program.
+    * Each argument is followed by a `\n` in the new string.
+    * If `ac == 0`, `av == NULL`, or the function fails - returns `NULL`.
+
+* **6. I will show you how great I am**
+  * [100-strtow.c](./100-strtow.c): C function that splits a string into words.
+    * Returns a pointer to a newly-allocated space in memory containing
+    an array of strings (words).
+    * Each element of the array of strings contains a single word, null-terminated.
+    * The last element of the returned array is `NULL`.
+    * Words are separated by spaces.
+    * If `str == NULL`, `str == ""`, or the function fails - returns `NULL`.
