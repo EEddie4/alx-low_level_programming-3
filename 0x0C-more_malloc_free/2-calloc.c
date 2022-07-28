@@ -10,15 +10,21 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *memb;
-	unsigned int i = 0;
+	void *mem;
+	char *filler;
+	unsigned int index;
 
-	if (size == 0 || nmemb == 0)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
-	memb = malloc(nmemb * size);
-	if (nmemb == NULL)
+	mem = malloc(size * nmemb);
+
+	if (mem == NULL)
 		return (NULL);
-	for (; i < (nmemb * size); i++)
-		*(memb + 1) = 0;
-	return (memb);
+
+	filler = mem;
+
+	for (index = 0; index < (size * nmemb); index++)
+		filler[index] = '\0';
+
+	return (mem);
 }
